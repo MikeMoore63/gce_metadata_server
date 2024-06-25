@@ -16,16 +16,19 @@ scoop:
   goamd64: v1
 builds:
   - id: gce_metadata_server
+    main: ./cmd
     goos:
       - linux
+      - darwin
     goarch:
       - amd64
+      - arm64
     goamd64:
       - v1
+    goarm:
+      - 7
     env:
       - CGO_ENABLED=0
-    targets:
-      - linux_amd64_v1
     binary: gce_metadata_server
     builder: go
     gobinary: go
@@ -35,7 +38,7 @@ builds:
 archives:
   - id: archive
     name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ with .Arm }}v{{ . }}{{ end }}{{ with .Mips }}_{{ . }}{{ end }}{{ if not (eq .Amd64 "v1") }}{{ .Amd64 }}{{ end }}'
-    format: tar.gz
+    format: binary
     files:
       - LICENSE*
       - README*    
@@ -86,4 +89,3 @@ sboms:
     documents:
       - ${artifact}.spdx.sbom
     artifacts: archive
-
