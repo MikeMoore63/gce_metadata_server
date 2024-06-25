@@ -1,7 +1,7 @@
 {
   "computeMetadata": {
-    "v1":{
-    "instance": {
+    "v1": {
+      "instance": {
         "attributes": {
           "enable-oslogin": "false",
           "metadata2": "value2"
@@ -10,22 +10,15 @@
         "description": "",
         "disks": [
           {
-            "deviceName": "instance-1",
+            "deviceName": "booboo",
             "index": 0,
-            "interface": "SCSI",
-            "mode": "READ_WRITE",
-            "type": "PERSISTENT-BALANCED"
-          },
-          {
-            "deviceName": "disk-1",
-            "index": 1,
             "interface": "SCSI",
             "mode": "READ_WRITE",
             "type": "PERSISTENT-BALANCED"
           }
         ],
         "guestAttributes": {},
-        "hostname": "instance-1.c.srashid-test2.internal",
+        "hostname": "booboo.c.srashid-test2.internal",
         "id": 5775171277418378000,
         "image": "projects/debian-cloud/global/images/debian-11-bullseye-v20231004",
         "licenses": [
@@ -33,9 +26,9 @@
             "id": "3853522013536123851"
           }
         ],
-        "machineType": "projects/708288290784/machineTypes/e2-standard-4",
+        "machineType": "projects/231925320579/machineTypes/e2-standard-4",
         "maintenanceEvent": "NONE",
-        "name": "instance-1",
+        "name": "booboo",
         "networkInterfaces": [
           {
             "accessConfigs": [
@@ -53,7 +46,7 @@
             "ipAliases": [],
             "mac": "42:01:0a:80:00:13",
             "mtu": 1460,
-            "network": "projects/708288290784/networks/default",
+            "network": "projects/231925320579/networks/default",
             "subnetmask": "255.255.240.0",
             "targetInstanceIps": []
           }
@@ -67,11 +60,11 @@
           "preemptible": "FALSE"
         },
         "serviceAccounts": {
-          "708288290784-compute@developer.gserviceaccount.com": {
+          "on-prem-mntrng-logging-agent@methodical-bee-162815.iam.gserviceaccount.com": {
             "aliases": [
               "default"
             ],
-            "email": "708288290784-compute@developer.gserviceaccount.com",
+            "email": "on-prem-mntrng-logging-agent@methodical-bee-162815.iam.gserviceaccount.com",
             "scopes": [
               "https://www.googleapis.com/auth/cloud-platform",
               "https://www.googleapis.com/auth/userinfo.email"
@@ -81,7 +74,7 @@
             "aliases": [
               "default"
             ],
-            "email": "tpm-sa@core-eso.iam.gserviceaccount.com",
+            "email": "on-prem-mntrng-logging-agent@methodical-bee-162815.iam.gserviceaccount.com",
             "scopes": [
               "https://www.googleapis.com/auth/cloud-platform",
               "https://www.googleapis.com/auth/userinfo.email"
@@ -89,26 +82,23 @@
           }
         },
         "tags": [
-          "tag1",
-          "tag2"
+          "booboo"
         ],
         "virtualClock": {
           "driftToken": "0"
         },
-        "zone": "projects/708288290784/zones/us-central1-a"
+        "zone": "projects/231925320579/zones/us-central1-a"
       },
-    "oslogin": {
-      "authenticate": {
-        "sessions": {}
+      "oslogin": {
+        "authenticate": {
+          "sessions": {}
+        }
+      },
+      "project": {
+        "attributes": {},
+        "numericProjectId": 231925320579,
+        "projectId": "methodical-bee-162815"
       }
-    },
-    "project": {
-      "attributes": {
-        "ssh-keys": "srashid:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCdVeH9zvBfNc7x9mVxo6SMvtz6yRlXtvoiUyEBnSaQg4NIGFeyoRKkAdW2Ubp7ZSHn1kudHR1d9uiFqGtBJ/u6uS/07/mOFNKf4JRzb2dj7IpCZOntV4yQUu+TEcnS8TV9DW5aTQ3YMJgZEV+5FQr/1dTY3t+92gzIr5nGJqArRtJgiLACq34wgcU71cMiNpEhUHk07doIxoOC1AJaHyPVlAdNt1FKQoo7cfJPoKjYBPvUlnAmf1s6in90g7HqBMS5xo1cPhHY42JZpH0kySLpZKEwDtjXjoIT+felVOCq8HTOph1N9VmoW3IrtyB+sBod2kJGlOSmV0dypzW9Vrozd2J0c+D78tNooeHFgNKmu8/YP57TKgLKfZsg5aDCtrv0= srashid@srashid12"
-      },
-      "numericProjectId": 708288290784,
-      "projectId": "core-eso"
     }
   }
-}
 }
